@@ -14,7 +14,7 @@ const Left = ({ code, setCode, setReview, setIsLoading, isLoading }) => {
     try {
       // Use axios for the POST request
       const response = await axios.post(
-        "https://ai-code-reviewer-obmc.onrender.com/",
+        "https://ai-code-reviewer-obmc.onrender.com/ai/get-review",
         {
           code, // The data payload
         }
