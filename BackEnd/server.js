@@ -14,6 +14,10 @@ app.get("/", (req, res) => {
 
 app.use("/ai", aiRoutes);
 
-app.listen(3000, () => {
-  console.log(`Server is running on port : 3000`);
+// Use the PORT from environment variables for deployment, with a fallback to 3000
+const port = process.env.PORT || 3000;
+
+// Listen on 0.0.0.0 to accept connections from outside the container
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Server is running on port : ${port}`);
 });
