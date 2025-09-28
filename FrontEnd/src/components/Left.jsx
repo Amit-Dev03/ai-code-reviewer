@@ -13,9 +13,12 @@ const Left = ({ code, setCode, setReview, setIsLoading, isLoading }) => {
     setReview(""); // Clear previous review
     try {
       // Use axios for the POST request
-      const response = await axios.post("http://localhost:3000/ai/get-review", {
-        code, // The data payload
-      });
+      const response = await axios.post(
+        "https://ai-code-reviewer-obmc.onrender.com/",
+        {
+          code, // The data payload
+        }
+      );
 
       // With axios, the response data is in the `data` property
       setReview(response.data);
