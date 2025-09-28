@@ -1,0 +1,5 @@
+npm i prismjs -> for formating
+npm i react-simple-code-editor
+npm i axios -> communication between frontend and backend
+npm i cors -> bcz express server does not share its resources with anyone, even frontend also
+npm install rehype-prism-plus -> Install the Highlighting Plugin for code review
